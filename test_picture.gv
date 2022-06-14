@@ -1,0 +1,17 @@
+digraph test_picture {
+	INIT [label=INIT]
+	RED [label=RED]
+	GREEN [label=GREEN]
+	YELLOW [label=YELLOW]
+	OFF [label=OFF]
+	INIT -> RED [label="TURN ON/1 latency:3"]
+	RED -> GREEN [label="TURN GREEN/1 latency:2"]
+	GREEN -> YELLOW [label="TURN YELLOW/1 latency:2"]
+	YELLOW -> RED [label="TURN RED/1 latency:2"]
+	RED -> RED [label="TURN RED/0 latency:2"]
+	GREEN -> GREEN [label="TURN GREEN/0 latency:2"]
+	YELLOW -> YELLOW [label="TURN YELLOW/0 latency:2"]
+	RED -> OFF [label="TURN OFF/1 latency:2"]
+	GREEN -> OFF [label="TURN OFF/1 latency:2"]
+	YELLOW -> OFF [label="TURN OFF/1 latency:2"]
+}
